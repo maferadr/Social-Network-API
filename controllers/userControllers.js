@@ -1,5 +1,5 @@
 const { ObjectId } = require('mongoose').Types;
-const { Thought, User } = require('../models');
+const { User } = require('../models');
 
 //function to group users and thoughts together
 

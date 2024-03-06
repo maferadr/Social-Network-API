@@ -21,33 +21,39 @@ connection.once('open', async ()=>{
     }
 
     //Create an empty array to hold users
-    const users = [];
+    const users = [
+        {
+            "username": "mateo123",
+            "email": "mateo@gmail.com"
+        }
+    ];
 
-    for(let i = 0; i < users.length; i++){
-        const username = this.username;
-        const email = this.email;
-        //Ask the way to grab thoughts => Where would we be retrieving this from?
-        const friends = this.friends;
+    // for(let i = 0; i < users.length; i++){
+    //     const username = this.username;
+    //     const email = this.email;
+    //     //Ask the way to grab thoughts => Where would we be retrieving this from?
+    //     const friends = this.friends;
 
-        users.push({
-            username,
-            email,
-            friends
-        });
-    }
+    //     users.push({
+    //         username,
+    //         email,
+    //         friends
+    //     });
+    // }
 
     //Add users to the collection and await the results
     const userData = await User.insertMany(users);
-    userData.json(data);
+    // userData.json(data);
 
     //Add thoughts to the collection and await the results
     await Thought.create({
         // How to specify the thoughtText?
-        username: [...userData.map(({_id}) => _id )],
+        username: 'maria123',
+        thoughtText: 'This is great!'
     });
 
     //Log out the data
-    console.table(users);
+    console.table(userData);
     console.info('Seeding complete! 🌱');
     process.exit(0);
 })
