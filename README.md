@@ -59,7 +59,7 @@ As developers we sometimes run with the need of counting with an API for which w
 5. Nodemon to run the application.
 
 ## Mock Up
-[Walkthrough Video](https://drive.google.com/file/d/1RuE5ANQ3JJwsZJVDcEPDKkUVS6CxLp7A/view?usp=sharing)
+[Walkthrough Video](https://drive.google.com/file/d/1Wl2Z6GMik42rNx_prKVEKZuMB2O6Zd9R/view?usp=sharing)
 
 ## License
 
